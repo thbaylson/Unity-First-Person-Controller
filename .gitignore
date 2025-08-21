@@ -1,0 +1,27 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+[Bb]ackup*/
+[Cc]rashReports/
+Assets/StreamingAssets/aa.meta # Addressables may generate lots—keep .meta, ignore bundles if desired
+Assets/AssetStoreTools*
+
+# IDEs
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.pidb
+*.user
+*.unityproj
+*.booproj
+
+# OS
+.DS_Store
+Thumbs.db
