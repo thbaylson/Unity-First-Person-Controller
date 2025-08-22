@@ -13,6 +13,7 @@ Assets/StreamingAssets/aa.meta # Addressables may generate lots—keep .meta, ig
 Assets/AssetStoreTools*
 
 # IDEs
+.vs/
 .vscode/
 .idea/
 *.sln
