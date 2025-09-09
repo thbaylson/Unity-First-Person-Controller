@@ -3,7 +3,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public int MaxHealth { get; private set; } = 3;
-    [SerializeField] public int CurrentHealth { get; private set; } = 3;
+    [SerializeField] public int CurrentHealth { get; private set; }
+
+    private void Awake()
+    {
+        CurrentHealth = MaxHealth;
+    }
 
     public void TakeDamage(int damage)
     {

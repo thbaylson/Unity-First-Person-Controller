@@ -12,6 +12,9 @@
 Assets/StreamingAssets/aa.meta # Addressables may generate lots—keep .meta, ignore bundles if desired
 Assets/AssetStoreTools*
 
+# Don't redistribute 3rd party packages
+/[Aa]ssets/Imported Assets/3rd Party Assets
+
 # IDEs
 .vs/
 .vscode/
