@@ -5,7 +5,9 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] GameObject hitVFXPrefab;
     [SerializeField] int damageAmount = 1;
+    [SerializeField] float range = 1000f;
 
     private StarterAssetsInputs starterAssetsInputs;
 
@@ -30,8 +32,10 @@ public class Weapon : MonoBehaviour
         animator.Play(ANIM_SHOOT, 0, 0f);
 
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, range))
         {
+            GameObject hitParticles = Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
+
             hit.transform.GetComponent<EnemyHealth>()?.TakeDamage(damageAmount);
         }
 
